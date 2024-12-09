@@ -1,1 +1,59 @@
-desenvolvendo site 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperFlix Player Personalizado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        iframe {
+            display: block;
+            margin: 0 auto;
+        }
+        .controls {
+            margin-top: 10px;
+        }
+        button {
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #4b4cd1;
+        }
+    </style>
+</head>
+<body>
+    <h1>SuperFlix Player</h1>
+    <div id="SuperFlixAPIContainerVideo">
+        <iframe 
+            src="https://superflixapi.dev/serie/84958/1/1#noEpList#transparent#color:6c5ce7" 
+            width="800" 
+            height="450" 
+            frameborder="0" 
+            allowfullscreen 
+            preload="auto">
+        </iframe>
+    </div>
+
+    <!-- Controles personalizados -->
+    <div class="controls">
+        <button onclick="alert('Retroceder 10 segundos não suportado neste player.')">
+            &#9664; Voltar 10s
+        </button>
+        <button onclick="alert('Avançar 10 segundos não suportado neste player.')">
+            Avançar 10s &#9654;
+        </button>
+    </div>
+    <p>Carregamento contínuo ao pausar não é suportado por este player.</p>
+</body>
+</html>
+
